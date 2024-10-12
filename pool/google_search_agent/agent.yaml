@@ -1,0 +1,16 @@
+name: google_search_agent
+type: openai
+version: 0.0.1
+description: An agent that performs Google searches to find relevant information.
+target_tasks:
+  - perform Google searches for relevant information
+prompt_template: !prompt VanillaPrompt
+llm: 
+  model_name: gpt-4o-mini
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 0.0
+    max_tokens: 4096
+plugins:
+  - name: google_search
